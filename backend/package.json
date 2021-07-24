@@ -1,0 +1,45 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "API server, powered by Express.",
+  "main": "index.js",
+  "scripts": {
+    "start": "start mongod --dbpath ./db && nodemon --exec node index.js",
+    "test": "mocha -S --ui bdd --require ./tests/spec_helper.js --recursive ./tests --reporter spec",
+    "dev": "nodemon --exec node index.js"
+  },
+  "keywords": [
+    "mern",
+    "api",
+    "server-side"
+  ],
+  "author": "Code Gen",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.15.0",
+    "cors": "^2.8.4",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^5.7.0",
+    "jwt-simple": "^0.5.6",
+    "moment": "^2.13.0",
+    "mongoose": "^4.4.13",
+    "morgan": "^1.7.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.0",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.6.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.19.1",
+    "should": "^11.1.1",
+    "supertest": "^2.0.0"
+  }
+}
